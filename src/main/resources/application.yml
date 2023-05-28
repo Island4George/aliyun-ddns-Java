@@ -1,0 +1,16 @@
+logging:
+  config: conf/log4j2.xml
+
+task: #检查任务调度周期
+  schedule: "0 0/5 * * * ?"
+
+aliyun:
+  account: #阿里云的认证配置
+    access-key-id: xxxxx
+    access-key-secret: xxxxx
+
+  domain-configurations: #阿里云的域名配置，支持多域名，多记录配置
+    - domain-name: xxx.xxx
+      records:
+        - type: 'A'
+          rr: '@'
